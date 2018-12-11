@@ -1,20 +1,31 @@
 {
-  "name": "test-parcel",
+  "name": "FE-Boilerplate",
   "version": "1.0.0",
+  "description": "Front end boilerplate with Parcel, Pug and PostCSS forked from https://github.com/Blightwidow/article-parcel-static",
   "main": "index.js",
   "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "ie 11",
+    "last 2 versions"
+  ],
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "parcel build src/index.pug",
     "start": "parcel serve src/index.pug",
+    "watch": "parcel src/index.pug",
     "lint": "echo \"No lint\" && exit 1"
   },
   "dependencies": {
-    "parcel-bundler": "^1.7.0",
-    "postcss-cssnext": "^3.1.0",
-    "posthtml-pug": "^1.0.2"
+    "@babel/polyfill": "^7.0.0"
   },
   "devDependencies": {
-    "pug": "^2.0.3"
+    "autoprefixer": "^9.4.2",
+    "parcel-bundler": "^1.10.3",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-preset-env": "^6.4.0",
+    "posthtml-pug": "^1.0.2",
+    "pug": "^2.0.3",
+    "whatwg-fetch": "^3.0.0"
   }
 }
